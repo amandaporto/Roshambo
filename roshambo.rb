@@ -1,5 +1,5 @@
 
-def match
+def get_name
   puts "Player's name:"
   name = gets.chomp.upcase
   @name = name
@@ -8,13 +8,15 @@ def match
     exit
   end
 end
-match
+get_name
 
-puts "Rock, paper, or scissors?"
-user_choice = gets.chomp.capitalize
-puts "#{@name}'S CHOICE: #{user_choice}"
-comp_choice = ["Rock", "Paper", "Scissors"].sample
-puts "COMPUTER CHOICE: #{comp_choice}"
+def engagement
+  puts "Choose rock, paper, or scissors."
+  user_choice = gets.chomp.capitalize
+  puts "#{@name}'S CHOICE: #{user_choice}"
+  comp_choice = ["Rock", "Paper", "Scissors"].sample
+  puts "COMPUTER CHOICE: #{comp_choice}"
+end
 
 
 
