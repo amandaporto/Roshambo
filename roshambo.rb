@@ -10,7 +10,11 @@ def match
 end
 match
 
-
+puts "Rock, paper, or scissors?"
+user_choice = gets.chomp.capitalize
+puts "#{@name}'S CHOICE: #{user_choice}"
+comp_choice = ["Rock", "Paper", "Scissors"].sample
+puts "COMPUTER CHOICE: #{comp_choice}"
 
 
 
