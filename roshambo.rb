@@ -1,14 +1,6 @@
-choices = ["Rock", "Paper", "Scissors"]
-@choices = choices
-e_win = e_loss = e_draw = 0
-@e_win = e_win
-@e_loss = e_loss
-@e_draw = e_draw
-
-b_win = b_loss = b_draw = 0
-@b_win = b_win
-@b_loss = b_loss
-@b_draw = b_draw
+@choices = ["Rock", "Paper", "Scissors"]
+@e_win = @e_loss = @e_draw = 0
+@b_win = @b_loss = 0
 
 def get_name
   puts "Player's name:"
@@ -21,8 +13,7 @@ def get_name
 end
 
 def game
-  comp_choice = @choices.sample
-#  puts comp_choice                         # CHEAT MODE!!! SHOWING ANSWER"
+#  puts comp_choice     # CHEAT MODE!!! SHOWING ANSWER"
   begin
     puts "\nChoose Rock 👊🏼   Paper ✋🏻   or Scissors ✌🏼"
     user_choice = gets.chomp.capitalize
