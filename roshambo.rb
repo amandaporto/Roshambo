@@ -13,6 +13,7 @@ def get_name
 end
 
 def game
+  comp_choice = @choices.sample
 #  puts comp_choice     # CHEAT MODE!!! SHOWING ANSWER"
   begin
     puts "\nChoose Rock 👊🏼   Paper ✋🏻   or Scissors ✌🏼"
