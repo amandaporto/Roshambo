@@ -1,4 +1,3 @@
-
 class Roshambo
   def initialize (name)
     @choices = ["Rock", "Paper", "Scissors"]
@@ -8,6 +7,7 @@ class Roshambo
   end
 
   def game
+    puts "Trying to play the game!"
     until @b_loss == 2 || @b_win == 2
       comp_choice = @choices.sample
     #  puts comp_choice     # CHEAT MODE!!! SHOWING ANSWER"
@@ -64,10 +64,16 @@ end
 
 puts "Player's name:"
 name = gets.chomp.upcase
-  if name.empty?
-    puts "No name, no game!"
-    exit
-  else
-    roshambo = Roshambo.new(name)
-    roshambo.game
+if name.empty?
+  puts "No name, no game!"
+  exit
+end
+
+play_again = "Y"
+while play_again == "Y"
+  roshambo = Roshambo.new(name)
+  roshambo.game
+
+  puts "Want to play again? Y/N"
+  play_again = gets.chomp.upcase
 end
