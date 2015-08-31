@@ -61,16 +61,17 @@ class Roshambo
   end
 end
 
-puts "Player's name:"
-name = gets.chomp.upcase
-if name.empty?
-  puts "No name, no game!"
-  exit
-end
+
 
 multi_play = ["Y", "N"]
 play_again = "Y"
 while play_again == "Y"
+  puts "Player's name:"
+  name = gets.chomp.upcase
+  if name.empty?
+    puts "No name, no game!"
+    exit
+  end
   roshambo = Roshambo.new(name)
   roshambo.game
   begin
